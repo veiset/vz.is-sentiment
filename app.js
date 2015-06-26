@@ -12,6 +12,8 @@ var app = express();
 
 app.get('/favicon.ico', (req, res) => res.send('ok') );
 app.get('/:word', (req, res) => {
+	var date = new Date();
+	console.log(`${date} - ${req.params.word}`);
 	var score = sentiment(req.params.word).score;
 	if (score > 0) {
 		return res.status(200).send(randomChoice(good));
