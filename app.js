@@ -23,4 +23,4 @@ app.get('/:word', (req, res) => {
 	return res.status(200).send(randomChoice(whatever));
 });
 
-app.listen(4000);
+app.listen(8888);
